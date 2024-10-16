@@ -14,11 +14,11 @@ The second part, Mamba, is a sequence model first applied to auditory spatial at
 
 <img src="assets/SW_CNN.png" alt="SW_CNN" width="600"/>
 
-The architecture of SW$_\text{CNN}$. The input is a decision window of an EEG signal with 64 channels and $T$ samples. The output is logits for classifying attention location and subject ID. In this figure, the number in front of the @ represents the model channel dimension, and the + represents the vector concatenation of two dimensions.
+The architecture of $\text{SW}_\text{CNN}$. The input is a decision window of an EEG signal with 64 channels and $T$ samples. The output is logits for classifying attention location and subject ID. In this figure, the number in front of the @ represents the model channel dimension, and the + represents the vector concatenation of two dimensions.
 
 <img src="assets/SWIM.png" alt="SWIM" width="600"/>
 
-The architecture of SWIM. The SW$_\text{CNN}$ is shown in the last figure with the classification head removed, so the output of SW$_\text{CNN}$ is a 64-dim hidden feature. The hidden features from history windows are concatenated with it from the current window as input of Mamba. Then Mamba utilize this input to classify the auditory attention direction of the current window. In this figure, $\times$ means multiplication and $\sigma$ means an activation in the Mamba block.
+The architecture of SWIM. The $\text{SW}_\text{CNN}$ is shown in the last figure with the classification head removed, so the output of $\text{SW}_\text{CNN}$ is a 64-dim hidden feature. The hidden features from history windows are concatenated with it from the current window as input of Mamba. Then Mamba utilize this input to classify the auditory attention direction of the current window. In this figure, $\times$ means multiplication and $\sigma$ means an activation in the Mamba block.
 
 ## Setup
 
