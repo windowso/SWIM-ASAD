@@ -1,6 +1,6 @@
 #!/bin/bash
 devices=(0 1 2 3 4 5)
-root_dir=/home/zhangzy/SWIM-ASAD/logs
+root_dir=~/SWIM-ASAD/logs
 save_dir=logs0
 path=all_subject_leave_story_0
 run=3
@@ -36,12 +36,14 @@ python -m src.main \
     --val_ratio 0.15 \
     --speaker_num 3 \
     --subject_num 16 \
-    --dataset_path /home/zhangzy/KUL \
-    --raw_path /home/zhangzy/KUL/download \
-    --preprocessed_path /home/zhangzy/KUL/normalize_std_channel \
+    --dataset_path ~/KUL \
+    --raw_path ~/KUL/download \
+    --preprocessed_path ~/KUL/normalize_std_channel \
     --log_dir $path \
     --devices 0 \
     --version $version \
     --root_dir $root_dir \
     --save_dir $save_dir \
     --fast_dev_run \
+
+# In ~/KUL/download, there are S1.mat - S16.mat, please download them from the official KUL dataset website.

@@ -1,8 +1,8 @@
 #!/bin/bash
 for ((k=0; k<=63; k++)); do
     devices=(0 1 2 3 4 5 6 7)
-    root_dir=/home/zhangzy/SWIM-ASAD/logs
-    save_dir=logs1
+    root_dir=~/SWIM-ASAD/logs
+    save_dir=logs2
     path=channel_$k
     run=3
     config=all_subject_leave_story
@@ -40,16 +40,16 @@ for ((k=0; k<=63; k++)); do
                 --val_ratio 0.15 \
                 --speaker_num 3 \
                 --subject_num 16 \
-                --dataset_path /home/zhangzy/KUL \
-                --raw_path /home/zhangzy/KUL/download \
-                --preprocessed_path /home/zhangzy/KUL/normalize_std_channel \
+                --dataset_path ~/KUL \
+                --raw_path ~/KUL/download \
+                --preprocessed_path ~/KUL/normalize_std_channel \
                 --log_dir $path \
                 --devices ${devices[$((version%${#devices[@]}))]} \
                 --version $version \
                 --root_dir $root_dir \
                 --save_dir $save_dir \
                 --test_only \
-                --ckpt_path /home/zhangzy/SWIM-ASAD/logs/logs0/all_subject_leave_story_0/version_$version/checkpoints/*.ckpt \
+                --ckpt_path ~/SWIM-ASAD/logs/logs0/all_subject_leave_story_0/version_$version/checkpoints/*.ckpt \
             &
             version=$((version+1))
             if [ $((version%${#devices[@]})) -eq 0 ]
