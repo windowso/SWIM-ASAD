@@ -6,9 +6,9 @@ The paper has been accepted by SLT 2024.
 
 In complex auditory environments, the human auditory system possesses the remarkable ability to focus on a specific speaker while disregarding others. In this study, a new model named SWIM, a short-window convolution neural network (CNN) integrated with Mamba, is proposed for identifying the locus of auditory attention (left or right) from electroencephalography (EEG) signals without relying on speech envelopes.
 
-SWIM consists of two parts. The first is a short-window CNN (SW$_\text{CNN}$), which acts as a short-term EEG feature extractor and achieves a final accuracy of 84.9\% in the leave-one-speaker-out setup on the widely used KUL dataset. This improvement is due to the use of an improved CNN structure, data augmentation, multitask training, and model combination.
+SWIM consists of two parts. The first is a short-window CNN ($\text{SW}_\text{CNN}$), which acts as a short-term EEG feature extractor and achieves a final accuracy of 84.9\% in the leave-one-speaker-out setup on the widely used KUL dataset. This improvement is due to the use of an improved CNN structure, data augmentation, multitask training, and model combination.
 
-The second part, Mamba, is a sequence model first applied to auditory spatial attention decoding to leverage the long-term dependency from previous SW$_\text{CNN}$ time steps. By joint training SW$_\text{CNN}$ and Mamba, the proposed SWIM structure uses both short-term and long-term information and achieves an accuracy of 86.2\%, which reduces the classification errors by a relative 31.0\% compared to the previous state-of-the-art result.
+The second part, Mamba, is a sequence model first applied to auditory spatial attention decoding to leverage the long-term dependency from previous $\text{SW}_\text{CNN}$ time steps. By joint training $\text{SW}_\text{CNN}$ and Mamba, the proposed SWIM structure uses both short-term and long-term information and achieves an accuracy of 86.2\%, which reduces the classification errors by a relative 31.0\% compared to the previous state-of-the-art result.
 
 ## Structure
 
