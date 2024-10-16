@@ -2,7 +2,7 @@
 devices=(0 1 2 3 4 5)
 root_dir=/home/zhangzy/SWIM-ASAD/logs
 save_dir=logs0
-path=all_subject_leave_story_1
+path=all_subject_leave_story_0
 run=3
 config=all_subject_leave_story
 seed=(42 43 44 45 46)

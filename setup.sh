@@ -1,6 +1,6 @@
-cd SWIM-ASAD/
-
-conda create -n swim python=3.11 -y
+source ~/.bashrc
+source ~/.zshrc
+conda create -n swim python=3.11.5 -y
 conda activate swim
 
 # Install dependencies
