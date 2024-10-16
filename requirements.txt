@@ -1,0 +1,6 @@
+pytorch-lightning==2.3.0
+mamba-ssm==2.0.4 # if cannot connect to github.com, please download the .whl file and install it manually
+# causal-conv1d==1.2.2.post1
+pandas
+mat4py
+tensorboardX
