@@ -38,6 +38,8 @@ The result in Fig. 5 of the paper: `bash scripts/channel_exclude.sh`
 
 The result in Fig. 7 of the paper: `bash scripts/all_subject_per_trial_part.sh`
 
+The result in Fig. 6 of the paper: `bash scripts/mamba.sh`
+
 ## Citation
 
 ```
