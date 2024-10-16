@@ -8,7 +8,7 @@ In complex auditory environments, the human auditory system possesses the remark
 
 SWIM consists of two parts. The first is a short-window CNN ($\text{SW}_\text{CNN}$), which acts as a short-term EEG feature extractor and achieves a final accuracy of 84.9\% in the leave-one-speaker-out setup on the widely used KUL dataset. This improvement is due to the use of an improved CNN structure, data augmentation, multitask training, and model combination.
 
-The second part, Mamba, is a sequence model first applied to auditory spatial attention decoding to leverage the long-term dependency from previous $\text{SW}_\text{CNN}$ time steps. By joint training $\text{SW}_\text{CNN}$ and Mamba, the proposed SWIM structure uses both short-term and long-term information and achieves an accuracy of 86.2\%, which reduces the classification errors by a relative 31.0\% compared to the previous state-of-the-art result.
+The second part, Mamba, is a sequence model first applied to auditory spatial attention decoding to leverage the long-term dependency from previous $\text{SW}\_\text{CNN}$ time steps. By joint training $\text{SW}_\text{CNN}$ and Mamba, the proposed SWIM structure uses both short-term and long-term information and achieves an accuracy of 86.2\%, which reduces the classification errors by a relative 31.0\% compared to the previous state-of-the-art result.
 
 ## Structure
 
@@ -18,7 +18,7 @@ The architecture of $\text{SW}_\text{CNN}$. The input is a decision window of an
 
 <img src="assets/SWIM.png" alt="SWIM" width="600"/>
 
-The architecture of SWIM. The $\text{SW}_\text{CNN}$ is shown in the last figure with the classification head removed, so the output of $\text{SW}_\text{CNN}$ is a 64-dim hidden feature. The hidden features from history windows are concatenated with it from the current window as input of Mamba. Then Mamba utilize this input to classify the auditory attention direction of the current window. In this figure, $\times$ means multiplication and $\sigma$ means an activation in the Mamba block.
+The architecture of SWIM. The $\text{SW}\_\text{CNN}$ is shown in the last figure with the classification head removed, so the output of $\text{SW}_\text{CNN}$ is a 64-dim hidden feature. The hidden features from history windows are concatenated with it from the current window as input of Mamba. Then Mamba utilize this input to classify the auditory attention direction of the current window. In this figure, $\times$ means multiplication and $\sigma$ means an activation in the Mamba block.
 
 ## Setup
 
